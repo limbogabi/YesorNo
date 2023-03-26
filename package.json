@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@serverless-stack/node": "^1.18.4",
+    "aws-amplify": "^5.0.22",
     "aws-sdk": "^2.1310.0",
     "uuid": "^9.0.0"
   },
