@@ -7,7 +7,7 @@ export const main = handler(async (event) => {
     TableName: Table.Quests.tableName,
     // 'Key' defines the partition key and sort key of the item to be retrieved
     Key: {
-      userId: "123", // The id of the author
+      userId: event.requestContext.authorizer.iam.cognitoIdentity.identityId, // The id of the author
       questId: event.pathParameters.id, // The id of the quest from the path
     },
   };
